@@ -13,7 +13,7 @@ export default function Weather() {
   const API_KEY = process.env.REACT_APP_OPENWEATHERMAP_API_KEY;
 
   const getWeather = (cityName) => {
-    const END_POINT = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&units=metric`;
+    const END_POINT = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&units=metric`;
     fetch(END_POINT)
       .then((resp) => {
         if (!resp.ok) {
